@@ -1,7 +1,4 @@
 get '/' do
+  p "di"
   erb :index
-end
-
-get '/' do
-  "Hell"
 end
