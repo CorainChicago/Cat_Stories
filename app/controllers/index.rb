@@ -6,6 +6,11 @@ get '/home' do
   erb :index
 end
 
-get '/posts' do
-  erb :post
+get '/users/new' do
+  erb :join_form
+end
+
+post '/users' do 
+  User.create(params[user])
+  redirect '/home'
 end
