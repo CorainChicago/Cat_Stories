@@ -7,7 +7,7 @@ MVP
 
 - Users can view cat pics
 - Users can view stories for that cat pic
-- Users can create an account 
+- Users can create an account  - done
 - Logged in users can write a cat story
 
 

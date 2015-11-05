@@ -11,3 +11,11 @@ p{
   float: right;
   margin: 2%;
 }
+
+.drop_in{
+  color: green;
+  border: 2px solid grey;
+  width: 30%;
+  display: inline-block;
+  float: right;
+}
