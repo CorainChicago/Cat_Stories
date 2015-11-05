@@ -14,16 +14,19 @@ post '/users' do
   end
 end
 
-get '/users/all' do 
-  @all = User.all
-  erb :profile
-end
-get '/users' do
-  "new user submission form"
-end
+
+# get '/sessions/new' do
+#   erb :'_login', layout: false
+# end
 
 
 get '/users/logout' do
   session[:user_id] = nil
   redirect '/home'
+end
+
+get '/users/all' do 
+  @all = User.all
+  p @all
+  erb :profile
 end

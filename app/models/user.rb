@@ -11,5 +11,13 @@ class User < ActiveRecord::Base
     self.hash_password = @password
   end
 
+  def self.authenticate(opts = {})
+    name = opts[:username]
+    user =  User.find_by(username: name)
+    if user && user.password == opts[:password]
+      return user
+    end
+  end
+
 
  end

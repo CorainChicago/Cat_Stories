@@ -1,7 +1,13 @@
 body{
   color:red;
 }
+ h3{
+   font-size: 2.0em;
+   margin-left: 10%;
+ }
 
-.container{
-  
+p{
+  display: inline;
+  float: right;
+  margin: 2%;
 }
