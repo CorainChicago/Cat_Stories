@@ -1,9 +1,11 @@
 body{
-  color:red;
+  color: black;
 }
+
  h3{
    font-size: 2.0em;
    margin-left: 10%;
+   width: 40%;
  }
 
 p{
@@ -12,10 +14,38 @@ p{
   margin: 2%;
 }
 
+li{
+  list-style: none;
+  display: inline;
+  float: right;
+  margin-right: 4%;
+}
+img{
+  width: 300px;
+  height: auto;
+}
+
 .drop_in{
   color: green;
   border: 2px solid grey;
   width: 30%;
   display: inline-block;
+  float: right;
+}
+
+
+.container{
+  border-bottom: 0.2em solid grey;
+}
+
+.body-display{
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
+.cat{
+  width: 30%;
+  height: auto;
+  border: 1px solid light-grey;
   float: right;
 }

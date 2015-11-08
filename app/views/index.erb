@@ -1,3 +1,13 @@
 <div class="container">
-<h3>I like to drink with my cat</h3>
+<h3>Drinking With My Cat</h3>
 </div>
+
+<div class="body-display">  
+  <% @pic.each do |pic| %>
+    <div class="cat">
+      <p><%= pic.id %> </p>  
+      <p><%= pic.title %> </p> 
+      <p><img src= <%= pic.url %>> </p>
+    </div>
+  <% end %>
+</div>  

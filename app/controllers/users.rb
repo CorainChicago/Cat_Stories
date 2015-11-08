@@ -1,3 +1,4 @@
+  
 get '/users/new' do
   if request.xhr?
     erb :'user/_join', layout: false
@@ -8,9 +9,8 @@ end
 
 post '/users' do 
   @user = User.create(params[:user])
-  @user
   if @user.valid?
-   session[:user_id] = @user.id
+   session[:id] = @user.id
    redirect "/"
   else @registration_error = true
    erb :'user/_join'
@@ -25,13 +25,22 @@ get '/users/login' do
   end
 end
 
+post '/users/login' do
+  @user = User.authenticate(params[:user])
+  if @user
+    session[:id] = @user.id
+  else
+    redirect '/user/_join'
+  end
+end
+
 get '/users/logout' do
-  session[:user_id] = nil
+  p session
+  session[:id] = nil
   redirect '/home'
 end
 
 get '/users/all' do 
-  @all = User.all
   p @all
   erb :profile
 end
