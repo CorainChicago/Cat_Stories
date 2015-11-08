@@ -5,9 +5,10 @@ Can I deploy via Heroku?
 
 MVP
 
+- Users can create an account 
+- Users can login and see views based on login status
 - Users can view cat pics
 - Users can view stories for that cat pic
-- Users can create an account  - done
 - Logged in users can write a cat story
 
 
