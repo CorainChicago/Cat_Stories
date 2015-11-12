@@ -1,4 +1,4 @@
-  
+
 get '/users/new' do
   if request.xhr?
     erb :'user/_join', layout: false
@@ -29,6 +29,7 @@ post '/users/login' do
   @user = User.authenticate(params[:user])
   if @user
     session[:id] = @user.id
+    redirect '/home'
   else
     redirect '/user/_join'
   end
@@ -40,7 +41,3 @@ get '/users/logout' do
   redirect '/home'
 end
 
-get '/users/all' do 
-  p @all
-  erb :profile
-end

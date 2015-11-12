@@ -1,13 +1,15 @@
-<div class="container">
-<h3>Drinking With My Cat</h3>
-</div>
+
 
 <div class="body-display">  
   <% @pic.each do |pic| %>
     <div class="cat">
-      <p><%= pic.id %> </p>  
+      <a href="/cats/<%= pic.id %>"> 
       <p><%= pic.title %> </p> 
       <p><img src= <%= pic.url %>> </p>
-    </div>
+    </a> </div>
+  <% end %>
+
+  <% if loggin? %>
+    <p><a href='/cats/new'>Add a pic</a></p>
   <% end %>
 </div>  

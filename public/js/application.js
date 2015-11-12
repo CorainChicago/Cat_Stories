@@ -11,7 +11,7 @@ $(document).ready(function() {
       })
       request.done(function(data){
         formOnPage = 0
-        $('.container').last().append(data);
+        $('.container').append(data);
       });
     }
     });

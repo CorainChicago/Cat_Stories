@@ -26,7 +26,8 @@ img{
 }
 
 .drop_in{
-  color: green;
+  color: black;
+  padding: 2%;
   border: 2px solid grey;
   width: 30%;
   display: inline-block;
@@ -45,7 +46,12 @@ img{
 
 .cat{
   width: 30%;
+  margin: 5%;
   height: auto;
   border: 1px solid light-grey;
   float: right;
+}
+
+.form{
+  display: inline-block;
 }

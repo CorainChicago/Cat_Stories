@@ -13,17 +13,25 @@
   <div class='navbar'>
     <ol>
      <% if loggin? %>
-       <li><a href='/home'>Home</a></li>
-        <li id="join"><a href='/users/new'>Join</a></li>
-        <li id="login"><a href='/users/login'>Login</a></li>
-        <% else %>
-        <li><a href='/home'>Home</a></li>
-        <li><a href='/users/logout'>Logout</a></li>
-      </ul>
-      <% end %>
+      <li><a href='/home'>Home</a></li>
+      <li><a href='/profile/<% user_find.id %>'>Profile</a></li>
+      <li><a href='/users/logout'>Logout</a></li>
+    <% else %>
+      <li><a href='/home'>Home</a></li>
+      <li id="join"><a href='/users/new'>Join</a></li>
+      <li id="login"><a href='/users/login'>Login</a></li>
+    <% end %>
+    </ol>
   </div>
   <div class='container'>
+    <div class="container">
+        <h3>Drinking With My Cat</h3>
+    </div>
     <%= yield %>
   </div>
+
+  <footer>
+    <p>What's more cute than a cat? Stories about cats</p>
+  </footer>
 </body>
 </html>
